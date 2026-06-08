@@ -143,7 +143,7 @@ function navigate(section) {
     // Hide all sections
     document.querySelectorAll('.app-section').forEach(sec => sec.classList.remove('active'));
     const targetSection = document.getElementById(`section-${section}`);
-    if (targetSection) targetSection.classList.add('acti'e');
+    if (targetSection) targetSection.classList.add('active');
     
     // Update sidebar active states
     document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
