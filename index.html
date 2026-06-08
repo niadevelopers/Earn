@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CloserKE — Field Sales Training Program</title>
-<link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#2d3a1f">
 <meta name="description" content="A practical training program for digital field sales in Kenya. Learn, practice, close.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2516,19 +2515,5 @@ td.rule-col { font-size: 12px; color: var(--muted); }
    💬
 </a>
 
-   <script>
-// Register Service Worker for offline support
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js')
-      .then((registration) => {
-        console.log('SW registered: ', registration);
-      })
-      .catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError);
-      });
-  });
-}
-</script>
 </body>
 </html>
