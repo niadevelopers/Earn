@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CloserKE — Field Sales Training Program</title>
+  <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#2d3a1f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CloserKE">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232d3a1f'/%3E%3Ctext x='50' y='67' font-size='50' text-anchor='middle' fill='%23c9a227' font-weight='bold'%3ECK%3C/text%3E%3C/svg%3E">
+   
 <meta name="description" content="A practical training program for digital field sales in Kenya. Learn, practice, close.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2514,5 +2521,15 @@ td.rule-col { font-size: 12px; color: var(--muted); }
    💬
 </a>
 
+  <script>
+// Register Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => console.log('SW registered:', reg.scope))
+      .catch(err => console.log('SW failed:', err));
+  });
+}
+</script> 
 </body>
 </html>
