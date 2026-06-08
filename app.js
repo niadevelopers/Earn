@@ -143,7 +143,7 @@ function navigate(section) {
     // Hide all sections
     document.querySelectorAll('.app-section').forEach(sec => sec.classList.remove('active'));
     const targetSection = document.getElementById(`section-${section}`);
-    if (targetSection) targetSection.classList.add('active');
+    if (targetSection) targetSection.classList.add('acti'e');
     
     // Update sidebar active states
     document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
@@ -369,6 +369,10 @@ function validatePhone(phone) {
     return re.test(phone);
 }
 
+// ===============================
+// APPLICATION SUBMIT - SENDS TO WHATSAPP
+// ===============================
+
 function submitApply() {
     const name = document.getElementById('f-name')?.value.trim();
     const phone = document.getElementById('f-phone')?.value.trim();
@@ -376,29 +380,64 @@ function submitApply() {
     const exp = document.getElementById('f-exp')?.value;
     const why = document.getElementById('f-why')?.value.trim();
     
+    // Validation
     let valid = true;
-    if (!name) { document.getElementById('e-name').style.display = 'block'; valid = false; }
-    else { document.getElementById('e-name').style.display = 'none'; }
+    if (!name) { 
+        document.getElementById('e-name').style.display = 'block'; 
+        valid = false; 
+    } else { 
+        document.getElementById('e-name').style.display = 'none'; 
+    }
     
-    if (!phone || !validatePhone(phone)) { document.getElementById('e-phone').style.display = 'block'; valid = false; }
-    else { document.getElementById('e-phone').style.display = 'none'; }
+    if (!phone || !validatePhone(phone)) { 
+        document.getElementById('e-phone').style.display = 'block'; 
+        valid = false; 
+    } else { 
+        document.getElementById('e-phone').style.display = 'none'; 
+    }
     
-    if (!area) { document.getElementById('e-area').style.display = 'block'; valid = false; }
-    else { document.getElementById('e-area').style.display = 'none'; }
+    if (!area) { 
+        document.getElementById('e-area').style.display = 'block'; 
+        valid = false; 
+    } else { 
+        document.getElementById('e-area').style.display = 'none'; 
+    }
     
     if (!valid) {
         showToast('Please fill all required fields correctly', true);
         return;
     }
     
-    // Save profile
+    // Get selected experience label
+    let expLabel = '';
+    switch(exp) {
+        case 'none': expLabel = 'No experience — starting fresh'; break;
+        case 'some': expLabel = 'Some experience (chama sales, small biz)'; break;
+        case 'field': expLabel = 'Field sales experience'; break;
+        case 'digital': expLabel = 'Digital sales / social media'; break;
+        default: expLabel = 'Not specified';
+    }
+    
+    // Build WhatsApp message
+    const message = `🟢 *NEW CLOSER APPLICATION* 🟢%0A%0A
+📛 *Name:* ${name}%0A
+📞 *Phone:* ${phone}%0A
+📍 *Area:* ${area}%0A
+💼 *Experience:* ${expLabel}%0A
+💭 *Motivation:* ${why || 'Not provided'}%0A%0A
+🔹 *Sent from CloserKE website* 🔹`;
+    
+    // Replace with YOUR WhatsApp number (include country code, no plus sign)
+    // Example: 254700123456 for Kenya
+    const YOUR_WHATSAPP_NUMBER = '254140438390';  // <--- CHANGE THIS TO YOUR NUMBER
+    
+    const whatsappUrl = `https://wa.me/${YOUR_WHATSAPP_NUMBER}?text=${message}`;
+    
+    // Save profile locally (optional - for UI display only)
     userProfile = { name, phone, area, experience: exp, motivation: why };
     saveProfile();
     
-    // In a real scenario: send to admin via webhook / email
-    console.log('Application submitted:', userProfile);
-    
-    // Show success UI
+    // Show success message
     const formWrap = document.getElementById('applyFormWrap');
     const successDiv = document.getElementById('applySuccess');
     if (formWrap && successDiv) {
@@ -406,11 +445,14 @@ function submitApply() {
         successDiv.style.display = 'block';
     }
     
-    showToast('Application sent! Check WhatsApp within 24 hours.');
+    showToast('Redirecting to WhatsApp...');
     
-    // Optional: simulate webhook call
-    // fetch('https://your-webhook-url.com/apply', { method: 'POST', body: JSON.stringify(userProfile) })
+    // Open WhatsApp after a short delay
+    setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+    }, 800);
 }
+    
 
 // Dashboard lesson items: mark complete on click
 function attachLessonListeners() {
