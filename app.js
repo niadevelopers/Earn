@@ -28,6 +28,93 @@ let completedLessons = {
     calculator: false
 };
 
+
+// ===============================
+// CUSTOM INSTALL POPUP
+// ===============================
+
+let deferredPrompt = null;
+let popupShown = false;
+let popupTimeout = null;
+
+// Show the custom popup
+function showInstallPopup() {
+  const popup = document.getElementById('installPopup');
+  if (popup && !popupShown) {
+    popup.classList.add('show');
+    popupShown = true;
+  }
+}
+
+function closeInstallPopup() {
+  const popup = document.getElementById('installPopup');
+  if (popup) {
+    popup.classList.remove('show');
+  }
+}
+
+// Listen for beforeinstallprompt event (Chrome's native banner)
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent Chrome's default mini-infobar
+  e.preventDefault();
+  // Store the event for later use
+  deferredPrompt = e;
+  
+  // Show our custom popup after 30 seconds (only once)
+  if (!popupShown && !localStorage.getItem('installPopupDismissed')) {
+    popupTimeout = setTimeout(() => {
+      showInstallPopup();
+    }, 30000); // 30 seconds
+  }
+});
+
+// Handle install button click
+document.getElementById('installAppBtn')?.addEventListener('click', async () => {
+  if (deferredPrompt) {
+    // Show the native install prompt
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    console.log(`User response: ${outcome}`);
+    deferredPrompt = null;
+    closeInstallPopup();
+    localStorage.setItem('installPopupDismissed', 'true');
+  } else {
+    // Fallback: show instructions based on device
+    showInstallInstructions();
+  }
+});
+
+// Fallback instructions for browsers that don't support beforeinstallprompt
+function showInstallInstructions() {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  const isAndroid = /Android/.test(navigator.userAgent);
+  
+  let message = '';
+  if (isIOS) {
+    message = '📱 Tap Share button → Add to Home Screen';
+  } else if (isAndroid) {
+    message = '📱 Tap menu (⋮) → Install app';
+  } else {
+    message = '📱 Your browser supports installation. Check the menu.';
+  }
+  
+  alert(message);
+  closeInstallPopup();
+}
+
+// Don't show popup again if user dismissed it previously
+if (localStorage.getItem('installPopupDismissed') === 'true') {
+  popupShown = true;
+}
+
+// Reset the dismissed flag (optional - for testing)
+function resetInstallPopup() {
+  localStorage.removeItem('installPopupDismissed');
+  popupShown = false;
+  showInstallPopup();
+}
+
+
 // Load/save to localStorage
 function loadProgress() {
     const saved = localStorage.getItem('closerke_progress');
