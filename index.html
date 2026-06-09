@@ -711,7 +711,7 @@ body {
 .ep-row.highlight .ep-val { color: var(--sienna); font-weight: 700; }
 
 /* ============================================
-   UNDERSTAND THE PRODUCT
+   UNDERSTAND THE PRODUCT (OVERHAULED)
    ============================================ */
 
 .product-explainer {
@@ -736,7 +736,7 @@ body {
 }
 .pe-body { font-size: 14px; color: var(--muted); line-height: 1.65; }
 
-/* Commission explainer - the KEY section */
+/* Commission explainer */
 .commission-explainer {
   background: var(--moss);
   border-radius: var(--radius-lg);
@@ -806,7 +806,6 @@ body {
 }
 .ar-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
 
-/* Activation flow visual */
 .activation-flow-visual {
   display: flex; align-items: stretch; gap: 0;
   background: var(--cream);
@@ -843,7 +842,7 @@ body {
 .afv-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
 
 /* ============================================
-   SCRIPTS SECTION
+   SCRIPTS SECTION (OVERHAULED — RAPPORT FIRST)
    ============================================ */
 
 .scripts-layout {
@@ -1097,7 +1096,7 @@ body {
 .ac-duration { font-family: var(--f-mono); font-size: 12px; color: var(--muted2); }
 
 /* ============================================
-   OBJECTIONS SECTION
+   OBJECTIONS SECTION (OVERHAULED)
    ============================================ */
 
 .objections-accordion { display: flex; flex-direction: column; gap: 0; }
@@ -1884,7 +1883,7 @@ td.rule-col { font-size: 12px; color: var(--muted); }
 
   </section>
 
-  <!-- ===================== PRODUCT ===================== -->
+  <!-- ===================== PRODUCT (OVERHAULED) ===================== -->
   <section class="app-section" id="section-product">
     <div class="section-wrap">
       <div class="sec-eyebrow">Module 1 · The Foundation</div>
@@ -1893,24 +1892,34 @@ td.rule-col { font-size: 12px; color: var(--muted); }
 
       <div class="product-explainer">
         <div class="pe-card">
-          <div class="pe-icon">📒</div>
-          <div class="pe-title">What the App Does</div>
-          <div class="pe-body">It's an advanced offline bookkeeping app for businesses. Tracks sales, stock, debts, and generates profit reports — without internet. Works on any phone or laptop. One device, one activation code, locked for life.</div>
+          <div class="pe-icon">💰</div>
+          <div class="pe-title">The Real Problem Kenyan Businesses Face</div>
+          <div class="pe-body">Most shop owners don't know their true profit. They see cash coming in but miss the small leaks: M-Pesa transaction charges (10-30 bob per payment), forgotten receipts, stock that disappears, expenses they don't track. By month end, they wonder where the money went. This app finds every leak.</div>
         </div>
         <div class="pe-card">
-          <div class="pe-icon">🏪</div>
-          <div class="pe-title">Who Needs It</div>
-          <div class="pe-body">Every shop that sells something: hardware stores, pharmacies, supermarkets, salons, boutiques, kiosks, stationers. Even businesses with a POS system still need it — POS tracks transactions, this tracks <em>profitability</em>.</div>
+          <div class="pe-icon">🤖</div>
+          <div class="pe-title">The AI Spending Guardian</div>
+          <div class="pe-body">Before you hire someone, before you buy stock, you ask the AI: "Can I afford this?" It knows your financial records, your budget, and even what it takes to maintain your current lifestyle (trained on KNBS data). It gives you a straight answer — no sugarcoating. "Yes" or "No, wait."</div>
         </div>
         <div class="pe-card">
-          <div class="pe-icon">💡</div>
-          <div class="pe-title">The Core Insight (Memorise This)</div>
-          <div class="pe-body">Most business owners know their sales but not their <em>actual profit</em>. They can't tell you this week's net without manual calculations. This app does it automatically — in real time. That's the pain point you press.</div>
+          <div class="pe-icon">📱</div>
+          <div class="pe-title">M-Pesa Cost Extractor</div>
+          <div class="pe-body">Most businesses ignore transaction costs. Copy-paste your M-Pesa messages, click one button — the app extracts every charge and records it automatically. Your profit margin stops being a lie. What you see is what you actually keep.</div>
         </div>
         <div class="pe-card">
-          <div class="pe-icon">📵</div>
-          <div class="pe-title">Why Offline Matters</div>
-          <div class="pe-body">Kenya's internet is unreliable, especially in markets and industrial areas. An offline app that still works at 2% battery with no data is not a feature — it's a selling point. Lead with it when you hear "internet problems."</div>
+          <div class="pe-icon">📸</div>
+          <div class="pe-title">Receipt Scanner</div>
+          <div class="pe-body">Tired of losing receipts? Snap a photo. The app logs it in your ledger instantly. No more "I forgot to record that expense." Your books stay clean without effort.</div>
+        </div>
+        <div class="pe-card">
+          <div class="pe-icon">⚠️</div>
+          <div class="pe-title">The Insolvency Early Warning</div>
+          <div class="pe-body">Most businesses realize they're in trouble when it's too late. This app watches your cashflow and alerts you weeks before you'd run dry. It calculates your "safe daily spend" — the exact amount you can use without killing your business.</div>
+        </div>
+        <div class="pe-card">
+          <div class="pe-icon">🔒</div>
+          <div class="pe-title">Offline + Automatic Backup</div>
+          <div class="pe-body">No internet? No problem. Works completely offline. And if you ever uninstall by mistake, your backup lives encrypted inside your phone — you don't lose a single record. No cloud, no hacking risk.</div>
         </div>
       </div>
 
@@ -1987,7 +1996,7 @@ td.rule-col { font-size: 12px; color: var(--muted); }
     </div>
   </section>
 
-  <!-- ===================== SCRIPTS ===================== -->
+  <!-- ===================== SCRIPTS (OVERHAULED — RAPPORT FIRST) ===================== -->
   <section class="app-section" id="section-scripts">
     <div class="section-wrap" style="max-width:1100px">
       <div class="sec-eyebrow">Module 2 · Sales Scripts</div>
@@ -2025,113 +2034,129 @@ td.rule-col { font-size: 12px; color: var(--muted); }
 
         <div class="scripts-content">
 
-          <!-- OPENER (rewritten) -->
+          <!-- OPENER — RAPPORT FIRST, LOWER GUARD -->
           <div class="script-panel active" id="sp-opener">
-            <div class="script-context-bar">📍 Scenario: You've just walked in. Owner is at the counter.</div>
+            <div class="script-context-bar">📍 Scenario: You walk in. Smile. Don't look like a salesman. Be human first.</div>
             <div class="nepq-tip">
-              <div class="nepq-label">NEPQ PRINCIPLE · OPEN WITH CURIOSITY, NOT SALES</div>
-              <div class="nepq-body">Don't mention an app. Don't say "I'm selling". Ask about a hidden cost they might be losing daily.</div>
+              <div class="nepq-label">NEPQ PRINCIPLE · LOWER THE GUARD BEFORE YOU ASK</div>
+              <div class="nepq-body">Start with something neutral. A greeting. A compliment about their shop. Ask permission before any business talk. Kenyans buy from people they trust — and trust starts with respect.</div>
             </div>
             <div class="dialogue">
               <div class="d-line you">
                 <div class="d-speaker you">YOU</div>
-                <div class="d-bubble"><em>"Habari boss. Nauliza tu — kila siku kuna pesa inayotoka kwa M-Pesa au kwa cash unayopoteza kwa transaction charges na receipts? Au hujawahi kukaa kuhesabu?"</em></div>
+                <div class="d-bubble"><em>"Habari ya asubuhi, boss. Biashara inaenda vizuri leo?"</em></div>
               </div>
               <div class="d-line them">
                 <div class="d-speaker them">THEM</div>
-                <div class="d-bubble">"Sijawahi hesabu... labda ni ndogo tu."</div>
+                <div class="d-bubble">"Poa, inaenda tu..."</div>
               </div>
               <div class="d-line you">
                 <div class="d-speaker you">YOU</div>
-                <div class="d-bubble"><em>"Exactly. Wengi hawajui — lakini mwisho wa mwezi, hiyo 'ndogo' inakula faida yako. Umeniambia tu ukweli. Na kama ungepata tool inayoficha hizo costs automatically na kukuonyesha pesa halisi iliyobaki — bila kukaa na calculator — ungependa kuiona?"</em></div>
+                <div class="d-bubble"><em>"Nishukuru. Sijakuja kuuza chochote haraka — lakini nauliza tu. Wewe mwenyewe unafanya bookkeeping yako? Au una mtu wa kuangalia pesa inaingia na kutoka?"</em></div>
+              </div>
+              <div class="d-line them">
+                <div class="d-speaker them">THEM</div>
+                <div class="d-bubble">"Nafanya mwenyewe... lakini kwa kweli sasa siko sure kabisa."</div>
+              </div>
+              <div class="d-line you">
+                <div class="d-speaker you">YOU</div>
+                <div class="d-bubble"><em>"Naelewa kabisa. Wengi wananicharazia hivyo. Na kwa kweli, ndio maana niko hapa — kusaidia wale wanaojiskia wako behind kwenye numbers zao. Ukiniambia — nikuonyeshe kitu kwa dakika mbili tu, utajua kama inakusaidia ama la. Hakuna shida ukisema hapana. Naomba niulize...?"</em></div>
               </div>
             </div>
             <div class="nepq-tip">
               <div class="nepq-label">WHY THIS WORKS</div>
-              <div class="nepq-body">You surfaced a real hidden loss (transaction fees, ignored receipts). You never said "app". They just admitted a problem. Then you offer a solution view. Guilt begins here.</div>
+              <div class="nepq-body">You didn't sell. You asked permission. You admitted you're not sure if they need it. That honesty lowers their guard. Now you have their attention without triggering the "salesman" alarm.</div>
             </div>
             <button class="btn btn-primary btn-sm" onclick="switchScript('discovery')">Next: Discovery →</button>
           </div>
 
-          <!-- DISCOVERY (rewritten) -->
+          <!-- DISCOVERY — SURFACE THE PAIN WITHOUT PROBING DEEPLY -->
           <div class="script-panel" id="sp-discovery">
-            <div class="script-context-bar">📍 Scenario: They agreed to see. Now deepen the financial pain.</div>
+            <div class="script-context-bar">📍 Scenario: They've agreed to talk. Now you gently uncover where money leaks.</div>
             <div class="nepq-tip">
-              <div class="nepq-label">NEPQ · CONSEQUENCE QUESTIONS</div>
-              <div class="nepq-body">Ask them to imagine a month where every cost is tracked automatically. Then ask about what they're losing now.</div>
+              <div class="nepq-label">NEPQ · MAKE THEM SEE THE GAP THEMSELVES</div>
+              <div class="nepq-body">Don't tell them they're losing money. Ask questions that make them realize it. "Mwisho wa mwezi, unajua pesa yako ilikwenda wapi?"</div>
             </div>
             <div class="dialogue">
               <div class="d-line you">
                 <div class="d-speaker you">YOU</div>
-                <div class="d-bubble"><em>"Ukiniambia — mwezi uliopita, uliweza kujua mapema kama ungeweza kukosa pesa ya kulipa wafanyakazi au rent? Au ulijua baada ya shida tayari?"</em></div>
+                <div class="d-bubble"><em>"Nikuulize tu kwa uaminifu — mwisho wa mwezi uliopita, uliweza kujua pesa gani ilikuja na pesa gani ilitoka? Au unakuta tu hesabu hailingani?"</em></div>
               </div>
               <div class="d-line them">
                 <div class="d-speaker them">THEM</div>
-                <div class="d-bubble">"Hapo ndio shida... najua mwisho wa mwezi."</div>
+                <div class="d-bubble">"Hapo ndio shida... najua nimeuza, lakini mwisho wa mwezi hakuna."</div>
               </div>
               <div class="d-line you">
                 <div class="d-speaker you">YOU</div>
-                <div class="d-bubble"><em>"Hiyo ndiyo hatari kubwa — kujua baada ya pesa kuisha. Biashara nyingi huwa hazifikiri zinaweza kukosa hadi inakuwa imechelewa. Lakini kuna tool inayotabiri hii kabla haijafika — inakuambia 'usitumie leo kwa sababu kesho utakosa'. Unadhani ingekusaidia kuwa makini?"</em></div>
+                <div class="d-bubble"><em>"Sawa kabisa. Watu wengi wanakosa kwa sababu ya vitu vidogo — M-Pesa charges, receipts zisizorekodiwa, expenses zinasahauliwa. Hizo ndizo zinakula faida. Ukijua hizo automatically — unadhani itakusaidia?"</em></div>
+              </div>
+              <div class="d-line them">
+                <div class="d-speaker them">THEM</div>
+                <div class="d-bubble">"Itasaidia sana."</div>
               </div>
             </div>
             <div class="nepq-tip">
-              <div class="nepq-label">SILENT GUILT TRIGGER</div>
-              <div class="nepq-body">"Kujua baada ya pesa kuisha" — every owner has felt that. Now they feel the weight of not having a warning system.</div>
+              <div class="nepq-label">THE SILENT GUILT</div>
+              <div class="nepq-body">When they admit "mwisho wa mwezi hakuna", they're feeling the pain already. Now your solution becomes a lifeline, not a product.</div>
             </div>
             <button class="btn btn-primary btn-sm" onclick="switchScript('demo')">Next: Demo →</button>
           </div>
 
-          <!-- DEMO (rewritten) -->
+          <!-- DEMO — LET THE APP SPEAK -->
           <div class="script-panel" id="sp-demo">
-            <div class="script-context-bar">📍 On their device. The app is downloading.</div>
+            <div class="script-context-bar">📍 Scenario: Permission granted. Demo on their device.</div>
             <div class="dialogue">
               <div class="d-line you">
                 <div class="d-speaker you">YOU</div>
-                <div class="d-bubble"><em>"Hii tool inafanya kazi offline kabisa — hakuna internet inayohitajika. Inachukua receipt yoyote kwa scan, inatoa M-Pesa cost moja kwa moja kwa gharama, na inakumbuka budget uliyojiwekea. Ukitaka kununua kitu au kumuajiri mtu, inakataa kama utazidi. Sasa ingiza sale moja ya leo tuangalie..."</em></div>
+                <div class="d-bubble"><em>"Sawa. Niombee simu yako dakika moja tu. Hii app inafanya kazi offline kabisa — hakuna data inayotumika. Pia, kama ukisahau kupiga receipt, inakumbusha. Ukikosa kuingiza expense, inaona. Hata M-Pesa charges zako inazitoa automatically — unakopi ujumbe, inafanya kazi yenyewe."</em></div>
               </div>
               <div class="d-line them">
                 <div class="d-speaker them">THEM</div>
-                <div class="d-bubble">(Enters sale)</div>
+                <div class="d-bubble">(Watches demo, visibly interested)</div>
               </div>
               <div class="d-line you">
                 <div class="d-speaker you">YOU</div>
-                <div class="d-bubble"><em>"Unaona faida halisi? Hii ndio pesa yako baada ya gharama zote. Na ukibadilisha budget yako, inaonyesha variance yoyote — unazidi au umepungua. Hii inachukua nafasi ya mhasibu wako kwa bei ya mara moja."</em></div>
+                <div class="d-bubble"><em>"Unaona hapa? Inaonyesha 'safe daily spend' — kiasi unachoweza kutumia leo bila kuhatarisha biashara. Na ikikuambia 'stop' — ni kama mhasibu wako anayekaa kwako, anakuambia ukweli usio na huruma."</em></div>
               </div>
+            </div>
+            <div class="nepq-tip">
+              <div class="nepq-label">THE TURNING POINT</div>
+              <div class="nepq-body">When they see the "safe daily spend" and realize they've been overspending, the guilt of past mistakes becomes the motivation to buy.</div>
             </div>
             <button class="btn btn-primary btn-sm" onclick="switchScript('close')">Next: Close →</button>
           </div>
 
-          <!-- CLOSE (rewritten) -->
+          <!-- CLOSE — ASSUMPTIVE, NOT PUSHY -->
           <div class="script-panel" id="sp-close">
             <div class="dialogue">
               <div class="d-line you">
                 <div class="d-speaker you">YOU</div>
-                <div class="d-bubble"><em>"Sawa boss. Hii tool inakugharimu mara moja tu — 990 bob. Hakuna subscription. Na inafanya kazi ya mhasibu, auditor, na financial guard. Ukianza leo, utajua mapema kabla ya shida. Tufanye activation?"</em></div>
+                <div class="d-bubble"><em>"Umeiona. Inafanya kazi. Bei yake ni 990 bob — mara moja tu, hakuna monthly, hakuna subscription. Ukianza leo, utajua mapema ikiwa kuna shida. Na ukihitaji kumwajiri mtu au kununua stock, utauliza AI kwanza — itakupa answer halisi. Tufanye activation sasa?"</em></div>
               </div>
               <div class="d-line them">
                 <div class="d-speaker them">THEM</div>
-                <div class="d-bubble">"Let's do it."</div>
+                <div class="d-bubble">"Sawa, tufanye."</div>
               </div>
             </div>
             <div class="nepq-tip">
-              <div class="nepq-label">THE GUILT SEAL</div>
-              <div class="nepq-body">They realize that by not having it, they've already lost money they'll never recover. The price feels smaller than the hidden loss.</div>
+              <div class="nepq-label">THE GUILT CLOSE</div>
+              <div class="nepq-body">They're not buying an app. They're buying peace of mind — and avoiding the guilt of losing another month of profit to invisible leaks.</div>
             </div>
             <button class="btn btn-primary btn-sm" onclick="switchScript('followup')">Next: Follow Up →</button>
           </div>
 
-          <!-- FOLLOWUP (unchanged but aligned) -->
+          <!-- FOLLOWUP — LOW PRESSURE -->
           <div class="script-panel" id="sp-followup">
-            <div class="script-context-bar">📍 They said "let me think".</div>
+            <div class="script-context-bar">📍 Scenario: They said "nitarudi" or "nitafikiria".</div>
             <div class="dialogue">
               <div class="d-line you">
                 <div class="d-speaker you">YOU</div>
-                <div class="d-bubble"><em>"Boss, tool bado iko simu yako. Leo ukiamua, utakuwa umeshaokoa pesa ya mwezi ujao. Nitafanya activation kwa dakika moja."</em></div>
+                <div class="d-bubble"><em>"Sawa kabisa boss. Nitakuachia namba yangu. Ukibadilisha nia leo, nitafanya activation kwa dakika moja. Na ukiamua hutaki, hakuna shida — usijisikie vibaya. Lakini ukikosa leo, usijuta kesho unapoona pesa imetoka bila sababu."</em></div>
               </div>
             </div>
             <div class="nepq-tip">
-              <div class="nepq-label">LOW PRESSURE, HIGH STAKES</div>
-              <div class="nepq-body">Remind them that delay = continued loss. You're not pushy; you're honest.</div>
+              <div class="nepq-label">THE SOFT GUILT</div>
+              <div class="nepq-body">You didn't pressure. You just reminded them that delaying means continuing to lose. Guilt works better than hype.</div>
             </div>
             <button class="btn btn-primary btn-sm" onclick="navigate('objections')">Next: Objections →</button>
           </div>
@@ -2141,67 +2166,67 @@ td.rule-col { font-size: 12px; color: var(--muted); }
     </div>
   </section>
 
-  <!-- ===================== OBJECTIONS ===================== -->
+  <!-- ===================== OBJECTIONS (OVERHAULED) ===================== -->
   <section class="app-section" id="section-objections">
     <div class="section-wrap">
       <div class="sec-eyebrow">Module 3 · Objection Handling</div>
       <h2 class="sec-title">Every "No" Has a Script</h2>
-      <p class="sec-desc">Objections are not rejections — they're questions dressed as resistance. Click each one to see the exact word-for-word response that redirects the conversation without pressure.</p>
+      <p class="sec-desc">Objections are not rejections — they're questions dressed as resistance. Click each one to see the exact word-for-word response.</p>
 
       <div class="objections-accordion">
         <div class="obj-item" id="obj-0">
           <button class="obj-trigger" onclick="toggleObj(0)">
             <span class="ot-icon">🖨️</span>
-            <span class="ot-text">"I already have a POS system."</span>
+            <span class="ot-text">"Nina POS system already."</span>
           </button>
           <div class="obj-body">
             <div class="obj-response-label">YOUR RESPONSE</div>
-            <div class="obj-script">"That's good — POS tracks what you sell. But does it catch the M-Pesa transaction charges you lose every day? Does it scan receipts and log them so you don't forget expenses? This tool works alongside yours, it does what your POS doesn't — find the missing profit."</div>
-            <div class="obj-why"><strong>Why it works:</strong> You've named specific leaks (transaction costs, receipt scanning) they know they ignore.</div>
+            <div class="obj-script">"That's good — POS inachukua transactions. Lakini inakuambia M-Pesa charges zako za jana? Inarekodi receipt uliyopoteza? Inakuonyesha 'unaweza kutumia leo kiasi gani'? Hii inafanya kazi pamoja na POS yako — inafanya kile POS haiwezi."</div>
+            <div class="obj-why"><strong>Why it works:</strong> You're not replacing their system. You're adding what's missing.</div>
           </div>
         </div>
         <div class="obj-item" id="obj-1">
           <button class="obj-trigger" onclick="toggleObj(1)">
             <span class="ot-icon">💸</span>
-            <span class="ot-text">"I don't have money right now."</span>
+            <span class="ot-text">"Sina pesa sasa hivi."</span>
           </button>
           <div class="obj-body">
             <div class="obj-response-label">YOUR RESPONSE</div>
-            <div class="obj-script">"No problem — let me just show you how much you've already lost in the last month from small charges and missed tracking. If it's less than the price, don't buy. But if it's more, you're losing either way."</div>
-            <div class="obj-why"><strong>Why it works:</strong> You shift from selling to revealing loss. They feel the guilt of inaction.</div>
+            <div class="obj-script">"Hakuna shida — lakini hebu tuhesabu haraka. Ukiwa unapoteza Ksh 30 kwa transaction, na unafanya 10 transactions kwa siku — hiyo ni Ksh 9,000 kwa mwezi unapoteza. Ungependa kuacha kupoteza leo ama uendelee kupoteza hadi uwe na pesa?"</div>
+            <div class="obj-why"><strong>Why it works:</strong> You show them that not buying is more expensive than buying.</div>
           </div>
         </div>
         <div class="obj-item" id="obj-2">
           <button class="obj-trigger" onclick="toggleObj(2)">
             <span class="ot-icon">🧑‍💼</span>
-            <span class="ot-text">"My accountant handles everything."</span>
+            <span class="ot-text">"Accountant wangu anafanya kila kitu."</span>
           </button>
           <div class="obj-body">
             <div class="obj-response-label">YOUR RESPONSE</div>
-            <div class="obj-script">"Good — then this saves them time. But does your accountant warn you daily when you're about to exceed your budget? Does he tell you 'don't hire today' or 'this purchase will make you fail'? This tool does that live. Your accountant sees the past. This protects your future."</div>
-            <div class="obj-why"><strong>Why it works:</strong> You position the AI spending advisor as a guardian, not a replacement.</div>
+            <div class="obj-script">"Na accountant ako hapa nanyi every morning? Anakuambia 'usitumie leo'? Anarekodi receipt yako ya Ksh 50? Hii haibadilishi accountant — inakupea uwezo wa kujua kila siku, si kila mwezi."</div>
+            <div class="obj-why"><strong>Why it works:</strong> You shift from replacing to empowering.</div>
           </div>
         </div>
         <div class="obj-item" id="obj-3">
           <button class="obj-trigger" onclick="toggleObj(3)">
             <span class="ot-icon">📅</span>
-            <span class="ot-text">"Come back next week / I'm busy."</span>
+            <span class="ot-text">"Rudi next week / niko busy."</span>
           </button>
           <div class="obj-body">
             <div class="obj-response-label">YOUR RESPONSE</div>
-            <div class="obj-script">"Understood — but every week you wait, you lose money you'll never recover. The demo is 90 seconds. If it's not for you, I leave. If it is, you start saving today."</div>
-            <div class="obj-why"><strong>Why it works:</strong> Time = money lost. They feel the urgency without you shouting.</div>
+            <div class="obj-script">"Naelewa. Lakini next week utakuwa umepoteza faida ya wiki hii tena. Ninachukua dakika moja tu — kama haifai, nitaondoka. Ukiacha, utakuwa umejiokoa au umejipotezea?"</div>
+            <div class="obj-why"><strong>Why it works:</strong> Framing loss vs gain. They feel the risk of saying no.</div>
           </div>
         </div>
         <div class="obj-item" id="obj-4">
           <button class="obj-trigger" onclick="toggleObj(4)">
             <span class="ot-icon">🔒</span>
-            <span class="ot-text">"I don't trust these apps / Is it safe?"</span>
+            <span class="ot-text">"Data yangu itakuwa safe?"</span>
           </button>
           <div class="obj-body">
             <div class="obj-response-label">YOUR RESPONSE</div>
-            <div class="obj-script">"Fair. That's why this works offline — your data never leaves this phone. No server, no internet, no hacking. Even if you uninstall by mistake, your backup stays encrypted inside your device. Only you see your numbers."</div>
-            <div class="obj-why"><strong>Why it works:</strong> You directly answer fear with offline + encrypted backup — unique to your app.</div>
+            <div class="obj-script">"Data yako haiondoki kwa simu yako. Hata ukisahau kupiga backup, inajiweka yenyewe encrypted ndani ya device yako. Hakuna cloud, hakuna mtu anaweza kuivizia. Hata ukiondoa app kwa makosa, backup inabaki."</div>
+            <div class="obj-why"><strong>Why it works:</strong> You directly address the #1 fear of Kenyan business owners — data theft.</div>
           </div>
         </div>
       </div>
@@ -2213,7 +2238,7 @@ td.rule-col { font-size: 12px; color: var(--muted); }
     </div>
   </section>
 
-  <!-- ===================== MEDIA (unchanged structure) ===================== -->
+  <!-- ===================== MEDIA (structure unchanged, content placeholder) ===================== -->
   <section class="app-section" id="section-media">
     <div class="section-wrap-wide">
       <div class="sec-eyebrow">Module 4 · Field Recordings</div>
@@ -2226,21 +2251,18 @@ td.rule-col { font-size: 12px; color: var(--muted); }
         <div class="media-tab" data-tab="vlogs" onclick="switchMedia('vlogs')">📹 Daily Vlogs</div>
       </div>
 
-      <!-- VIDEOS -->
       <div class="media-panel active" id="mp-videos">
         <div class="video-grid" id="videoGrid"></div>
         <div style="margin-top:20px; padding:20px; background:var(--paper2); border:1px dashed var(--border-dark); border-radius:var(--radius-lg); text-align:center;">
-          <p style="font-size:13px; color:var(--muted); margin-bottom:10px;">📹 To add a video: upload to <a href="https://cloudinary.com" target="_blank">Cloudinary.com</a> (free), copy the URL, and paste it into <code style="font-family:var(--f-mono); background:var(--paper); padding:1px 5px; border-radius:3px; font-size:12px;">js/media.js</code></p>
+          <p style="font-size:13px; color:var(--muted); margin-bottom:10px;">📹 To add a video: upload to Cloudinary and update media.js</p>
           <button class="btn btn-ghost btn-sm" onclick="navigate('upload')">View Upload Guide →</button>
         </div>
       </div>
 
-      <!-- AUDIO -->
       <div class="media-panel" id="mp-audio">
         <div class="audio-list" id="audioList"></div>
       </div>
 
-      <!-- VLOGS -->
       <div class="media-panel" id="mp-vlogs">
         <div class="video-grid" id="vlogGrid"></div>
       </div>
@@ -2299,7 +2321,7 @@ td.rule-col { font-size: 12px; color: var(--muted); }
     </div>
   </section>
 
-  <!-- ===================== CALCULATOR (unchanged) ===================== -->
+  <!-- ===================== CALCULATOR ===================== -->
   <section class="app-section" id="section-calculator">
     <div class="section-wrap">
       <div class="sec-eyebrow">Your Numbers</div>
@@ -2352,7 +2374,7 @@ td.rule-col { font-size: 12px; color: var(--muted); }
     </div>
   </section>
 
-  <!-- ===================== APPLY (unchanged) ===================== -->
+  <!-- ===================== APPLY ===================== -->
   <section class="app-section" id="section-apply">
     <div class="section-wrap">
       <div class="apply-layout">
@@ -2425,7 +2447,7 @@ td.rule-col { font-size: 12px; color: var(--muted); }
     </div>
   </section>
 
-  <!-- ===================== UPLOAD ZONE (unchanged) ===================== -->
+  <!-- ===================== UPLOAD ZONE ===================== -->
   <section class="app-section" id="section-upload">
     <div class="section-wrap">
       <div class="sec-eyebrow">Owner Admin · Content Management</div>
@@ -2461,7 +2483,7 @@ td.rule-col { font-size: 12px; color: var(--muted); }
   <span class="cs-key">id:</span> <span class="cs-string">"vid_007"</span>,
   <span class="cs-key">title:</span> <span class="cs-string">"Pharmacy Close — Ksh 990 in 4 Minutes"</span>,
   <span class="cs-key">desc:</span> <span class="cs-string">"Full recording. Pharmacist had POS objection. Used the complement reframe."</span>,
-  <span class="cs-key">tag:</span> <span class="cs-string">"close"</span>,      <span class="cs-comment">// "close" | "rejection" | "tip"</span>
+  <span class="cs-key">tag:</span> <span class="cs-string">"close"</span>,
   <span class="cs-key">date:</span> <span class="cs-string">"12 Jun 2025"</span>,
   <span class="cs-key">duration:</span> <span class="cs-string">"4:22"</span>,
   <span class="cs-key">videoUrl:</span> <span class="cs-string">"https://res.cloudinary.com/YOUR_CLOUD/video/upload/YOUR_VIDEO.mp4"</span>,
@@ -2512,7 +2534,6 @@ td.rule-col { font-size: 12px; color: var(--muted); }
 <script src="media.js"></script>
 <script src="app.js"></script>
 
-   <!-- Add right before </body> -->
 <a href="https://wa.me/254140438390?text=I%20want%20to%20join%20CloserKE"
    style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white;
           width:60px; height:60px; border-radius:50%; display:flex; align-items:center;
@@ -2522,7 +2543,6 @@ td.rule-col { font-size: 12px; color: var(--muted); }
 </a>
 
   <script>
-// Register Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./sw.js')
